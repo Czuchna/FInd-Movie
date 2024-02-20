@@ -5,6 +5,7 @@ class AppColors {
   static const Color backgroundColor = Color.fromARGB(255, 20, 20, 20);
   static const Color iconColor = Colors.grey;
   static const Color fontColor = Colors.white;
+  static const Color fontButtomColor = Color(0xFF251605);
 }
 
 class AppSizes {

@@ -90,7 +90,7 @@ class RegisterScreen extends StatelessWidget {
                     // Handle log in
                   },
                   style: ElevatedButton.styleFrom(
-                      foregroundColor: const Color(0xFF251605),
+                      foregroundColor: AppColors.fontButtomColor,
                       backgroundColor: AppColors.appColor,
                       fixedSize: const Size(50, 50)),
                   child: const Row(
