@@ -14,8 +14,8 @@
 import 'package:auto_route/auto_route.dart' as _i4;
 import 'package:flutter/material.dart' as _i5;
 
-import 'screens/dashboard_screen.dart' as _i3;
-import 'screens/login_screen.dart' as _i1;
+import 'screens/dashboard_screen.dart' as _i1;
+import 'screens/login_screen.dart' as _i3;
 import 'screens/register_screen.dart' as _i2;
 
 class AppRouter extends _i4.RootStackRouter {
@@ -24,28 +24,22 @@ class AppRouter extends _i4.RootStackRouter {
 
   @override
   final Map<String, _i4.PageFactory> pagesMap = {
-    LoginScreenRoute.name: (routeData) {
-      final args = routeData.argsAs<LoginScreenRouteArgs>(
-          orElse: () => const LoginScreenRouteArgs());
+    DashboardScreenRoute.name: (routeData) {
       return _i4.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: _i1.LoginScreen(key: args.key),
+        child: const _i1.DashboardScreen(),
       );
     },
     RegisterScreenRoute.name: (routeData) {
-      final args = routeData.argsAs<RegisterScreenRouteArgs>(
-          orElse: () => const RegisterScreenRouteArgs());
       return _i4.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: _i2.RegisterScreen(key: args.key),
+        child: const _i2.RegisterScreen(),
       );
     },
-    DashboardScreenRoute.name: (routeData) {
-      final args = routeData.argsAs<DashboardScreenRouteArgs>(
-          orElse: () => const DashboardScreenRouteArgs());
+    LoginScreenRoute.name: (routeData) {
       return _i4.MaterialPageX<dynamic>(
         routeData: routeData,
-        child: _i3.DashboardScreen(key: args.key),
+        child: const _i3.LoginScreen(),
       );
     },
   };
@@ -53,7 +47,7 @@ class AppRouter extends _i4.RootStackRouter {
   @override
   List<_i4.RouteConfig> get routes => [
         _i4.RouteConfig(
-          LoginScreenRoute.name,
+          DashboardScreenRoute.name,
           path: '/',
         ),
         _i4.RouteConfig(
@@ -61,80 +55,44 @@ class AppRouter extends _i4.RootStackRouter {
           path: '/register-screen',
         ),
         _i4.RouteConfig(
-          DashboardScreenRoute.name,
-          path: '/dashboard-screen',
+          LoginScreenRoute.name,
+          path: '/login-screen',
         ),
       ];
 }
 
 /// generated route for
-/// [_i1.LoginScreen]
-class LoginScreenRoute extends _i4.PageRouteInfo<LoginScreenRouteArgs> {
-  LoginScreenRoute({_i5.Key? key})
-      : super(
-          LoginScreenRoute.name,
-          path: '/',
-          args: LoginScreenRouteArgs(key: key),
-        );
-
-  static const String name = 'LoginScreenRoute';
-}
-
-class LoginScreenRouteArgs {
-  const LoginScreenRouteArgs({this.key});
-
-  final _i5.Key? key;
-
-  @override
-  String toString() {
-    return 'LoginScreenRouteArgs{key: $key}';
-  }
-}
-
-/// generated route for
-/// [_i2.RegisterScreen]
-class RegisterScreenRoute extends _i4.PageRouteInfo<RegisterScreenRouteArgs> {
-  RegisterScreenRoute({_i5.Key? key})
-      : super(
-          RegisterScreenRoute.name,
-          path: '/register-screen',
-          args: RegisterScreenRouteArgs(key: key),
-        );
-
-  static const String name = 'RegisterScreenRoute';
-}
-
-class RegisterScreenRouteArgs {
-  const RegisterScreenRouteArgs({this.key});
-
-  final _i5.Key? key;
-
-  @override
-  String toString() {
-    return 'RegisterScreenRouteArgs{key: $key}';
-  }
-}
-
-/// generated route for
-/// [_i3.DashboardScreen]
-class DashboardScreenRoute extends _i4.PageRouteInfo<DashboardScreenRouteArgs> {
-  DashboardScreenRoute({_i5.Key? key})
+/// [_i1.DashboardScreen]
+class DashboardScreenRoute extends _i4.PageRouteInfo<void> {
+  const DashboardScreenRoute()
       : super(
           DashboardScreenRoute.name,
-          path: '/dashboard-screen',
-          args: DashboardScreenRouteArgs(key: key),
+          path: '/',
         );
 
   static const String name = 'DashboardScreenRoute';
 }
 
-class DashboardScreenRouteArgs {
-  const DashboardScreenRouteArgs({this.key});
+/// generated route for
+/// [_i2.RegisterScreen]
+class RegisterScreenRoute extends _i4.PageRouteInfo<void> {
+  const RegisterScreenRoute()
+      : super(
+          RegisterScreenRoute.name,
+          path: '/register-screen',
+        );
 
-  final _i5.Key? key;
+  static const String name = 'RegisterScreenRoute';
+}
 
-  @override
-  String toString() {
-    return 'DashboardScreenRouteArgs{key: $key}';
-  }
+/// generated route for
+/// [_i3.LoginScreen]
+class LoginScreenRoute extends _i4.PageRouteInfo<void> {
+  const LoginScreenRoute()
+      : super(
+          LoginScreenRoute.name,
+          path: '/login-screen',
+        );
+
+  static const String name = 'LoginScreenRoute';
 }

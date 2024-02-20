@@ -6,8 +6,8 @@ import 'package:find_movie/screens/register_screen.dart';
 export 'auto_route.gr.dart';
 
 @MaterialAutoRouter(routes: <AutoRoute>[
-  AutoRoute(page: LoginScreen, initial: true),
+  AutoRoute(page: DashboardScreen, initial: true),
   AutoRoute(page: RegisterScreen),
-  AutoRoute(page: DashboardScreen),
+  AutoRoute(page: LoginScreen),
 ])
 class $AppRouter {}
